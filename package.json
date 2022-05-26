@@ -1,6 +1,11 @@
 {
   "name": "checkpointapi",
   "version": "0.0.0",
+  "description": "a community api where community can interect ",
+  "main": "app.js",
+  "engines": {
+    "node" : "14.x"
+  },
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"

@@ -27,11 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("https://communityfourm.vercel.app/api/v1/", indexRouter);
-app.use("https://communityfourm.vercel.app/api/v1/users", usersRouter);
-app.use("https://communityfourm.vercel.app/api/v1/profile", profileRouter);
-app.use("https://communityfourm.vercel.app/api/v1/questions", questionRouter);
-app.use("https://communityfourm.vercel.app/api/v1/answers", answersRouter);
+app.use("/api/v1/", indexRouter);
+app.use("/api/v1/users", usersRouter);
+app.use("/api/v1/profile", profileRouter);
+app.use("/api/v1/questions", questionRouter);
+app.use("/api/v1/answers", answersRouter);
 
 //only admin can have access to these routes
 app.use(auth.isadmin);
